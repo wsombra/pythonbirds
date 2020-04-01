@@ -28,3 +28,10 @@ sombra = Pessoa(cadu, raildo, nome='Sombra', idade=40) #recebendo objetos...
 print(sombra.nome)
 for filho in sombra.filhos:
     print(filho.nome)
+    # python permite criar atributos em tempo de execução, exemplo !!!! não é boa prática!!!
+    cadu.sobrenome = 'Freitas'
+    print(cadu.sobrenome)
+    # método __dict__ serve para verificar os atributos de um objeto
+    print(cadu.__dict__)
+    # del para remover um atributo
+    # del cadu.sobrenome
