@@ -1,17 +1,20 @@
+
 class Pessoa:
-    # pra criar os atributos utilizo os método especial __init_(self)
-                   # * QTD não definida |  parametros
-     def __init__(self, *filhos,  nome=None, idade=40):
-         # Atributos
-         self.idade = idade
-         self.nome  = nome
-         # Atibuto filho recebe um list
-         self.filhos = list(filhos)
+    olhos = 2
+    ''' 
+    - Atributo de "classe", pois é um atributo comum entre os demais objetos (essa é a crítica)
+    - Para criar os atributos utilizo os método especial __init_(self)
+    - * QTD não definida |  parametros'''
+    def __init__(self, *filhos,  nome=None, idade=40):
+        # Atributos
+        self.idade = idade
+        self.nome  = nome
+        # Atibuto filho recebe um list
+        self.filhos = list(filhos)
 
 
-     def cumprimentar(self):
+    def cumprimentar(self):
         return f'Olá {id(self)}'
-
 if __name__ == '__main__':
         p = Pessoa()
         print(p.cumprimentar())
@@ -35,3 +38,5 @@ for filho in sombra.filhos:
     print(cadu.__dict__)
     # del para remover um atributo
     # del cadu.sobrenome
+    # Objeto cadu acessando o atributo de classe.
+    print(cadu.olhos)
